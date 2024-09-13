@@ -1,0 +1,33 @@
+-=-=-=-=-=-=-=-=-=-=-=-=---=-=-=-=-=-=-=-=-=- Styling -=-=-=-=-=-=-=-=-=-=-=-=---=-=-=-=-=-=-=-=-=-
+
+Some text is too long to fit on card properly, especially in hand
+
+10 text slightly too big in health icon
+
+-=-=-=-=-=-=-=-=-=-=-=-=---=-=-=-=-=-=-=-=-=- Bot management -=-=-=-=-=-=-=-=-=-=-=-=---=-=-=-=-=-=-=-=-=-
+
+battles start on bot turn and stuck
+
+-=-=-=-=-=-=-=-=-=-=-=-=---=-=-=-=-=-=-=-=-=- Battle Bugs -=-=-=-=-=-=-=-=-=-=-=-=---=-=-=-=-=-=-=-=-=-
+
+player has attacked remaining when a battle starts after another one
+
+can't click hud if battle started - announce it on the screen
+
+connections didn't register (poseidon - 6atk + 2 gold connections) vs cretan bull with 8 health
+
+equipment can only be viewed
+
+by default switch to attack when clicking on friendly cards
+
+-=-=-=-=-=-=-=-=-=-=-=-=---=-=-=-=-=-=-=-=-=- General -=-=-=-=-=-=-=-=-=-=-=-=---=-=-=-=-=-=-=-=-=-
+
+game not deleting when starting new one through host
+
+error saving games when winstowin = 1
+
+-=-=-=-=-=-=-=-=-=-=-=-=---=-=-=-=-=-=-=-=-=- Multiplayer -=-=-=-=-=-=-=-=-=-=-=-=---=-=-=-=-=-=-=-=-=-
+
+when host starts a game, the open game/lobby object needs to be updated for all players in lobby
+
+when a player wins a game, the other players are not redirected

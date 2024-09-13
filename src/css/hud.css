@@ -1,0 +1,428 @@
+.draw-button {
+    position: fixed;
+    display: flex;
+    right: 0%;
+    top: 60%;
+    width: 10vw;
+    height: 9vw;
+    background: none;
+    border: none;
+}
+.card-deck {
+    position: absolute;
+    width: auto;
+    height: 100%;
+}
+.card-deck-top {
+    position: absolute;
+    width: auto;
+    height: 6.2vw;
+    left: 0.6vw;
+    top: 0.3vw;
+    transition: transform 0.2s;
+}
+.draw-button:hover .card-deck-top.can-draw {
+    transform: translate(-0.5vw, 1.5vw);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.game-hud-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+   
+}
+.game-hud {
+    z-index: 10;
+}
+
+.player-hand-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -10vh;
+    width: 10vw;
+    left: 1vw;
+    z-index: 3;
+    height: 100vh;
+}
+.player-hand-container .card-container {
+    background-color: black;
+    margin-bottom: -16vw;
+}
+.player-hand-container .card-container:hover {
+    z-index: 2;
+}
+.player-hand-container.select {
+    background-color: rgba(127, 255, 212, 0.368);
+    cursor: pointer;
+}
+.hand-card-container {
+    width: 10vw;
+    height: 4vw
+}
+.player-hand-container.viewing {
+    pointer-events: none;
+    opacity: 70%;
+}
+
+.select-to-place-container {
+    position: fixed;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    right: 1%;
+    top: -20%;
+}
+
+.game-menu-modal-outer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.64);
+    transition: opacity 0.1s;
+}
+.game-menu-modal-outer.open {
+    opacity: 1;
+    pointer-events: all;
+}
+/* 
+.game-menu-modal-inner {
+    
+} */
+
+.card-place-cursor {
+    cursor: url("../images/Game/hud/Cursors/CardPlaceCursor.png"), default;
+}
+
+.game-modal {
+    z-index: 10;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-modal.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.game-modal-inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    align-items: center;
+    height: 60%;
+}
+
+.next-turn-button {
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    border-radius: 50%;
+    width: 6vw;
+    height: 6vw;
+    margin: 2vw;
+    font-size: 3vw;
+    border-width: 0.2vw;
+    outline-width: 0.4vw;
+}
+.next-turn-button img {
+    max-height: 90%;
+}
+.not-my-turn:hover {
+    background-color: rgb(4, 1, 15);
+    cursor: default;
+}
+.next-turn-button:focus {
+    background-color: rgb(4, 1, 15);
+}
+
+.next-turn-info {
+    position: absolute;
+    top: -4.5vw;
+    width: 8vw;
+    height: 2.4vw;
+    background-color: rgba(4, 1, 15, 0.521);
+    border-radius: 0.8vw;
+    color: whitesmoke;
+    border: rgba(255, 217, 0, 0.452) solid 0.15vw;
+    font-size: 1.2vw;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.1s;
+    padding: 0.5vw;
+}
+.next-turn-button:hover .next-turn-info {
+    opacity: 1;
+}
+.draw-button:hover .next-turn-info {
+    opacity: 1;
+}
+.cycle-view-button:hover .next-turn-info {
+    opacity: 1;
+}
+
+.shop-button {
+    position: fixed;
+    display: flex;
+    right: 12vw;
+    bottom: 4vh;
+    width: 5vw;
+    height: 5vw;
+    background: none;
+    border: none;
+    z-index: 12;
+}
+.shop-button img {
+    width: 8vw;
+    height: 8vw;
+}
+.shop-button p {
+    z-index: 5;
+    color: rgb(148, 245, 169);
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5vw;
+    margin-right: 0.5vw;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.shop-button:hover p {
+    opacity: 1;
+}
+.shop-button:hover {
+    cursor: pointer;
+}
+
+.shop-modal-outer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.62);
+    z-index:11;
+}
+
+.shop-modal-inner .card-container {
+    margin: 2vw;
+}
+
+.shop-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cost-container {
+    width: 20vw;
+    height: 2vw;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+  }
+
+.cost {
+position: relative;
+width: 2vw;
+height: 4vw;
+border-radius: 0.2vw;
+border: black solid 0.2vw;
+background-image: url("../images/Card/Cost.png");
+background-repeat: no-repeat;
+background-size:cover;
+margin: 0.2vw;
+}
+
+.buy-modal-outer {
+position: fixed;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.95);
+z-index: 12;
+}
+.buy-modal-inner .card-container {
+margin-top: 2vw;
+}
+.buy-open {
+    z-index: 13;
+}
+.payment-container {
+    flex-direction: column;
+    width: 44vw;
+    height: 45vw;
+    margin: 2vw;
+}
+.payment-container .cost {
+    margin: 1vw 1vw;
+}
+.payment-container .cost-container {
+    width: 100%;
+    height: 25%;
+}
+.payment.connector {
+    width: 2vw;
+    height: 2vw;
+    border-width: 0.2vw;
+    position: relative;
+}
+
+.card-deposit-container {
+    width: 100%;
+    height: 75%;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.card-deposit-slot {
+    margin: 0vw 1vw 0vw 1vw;
+}
+
+.buy-card-button {
+    position: fixed;
+    margin: 1vw;    
+    color: rgba(255, 255, 255, 0.505);
+    background-color: rgb(4, 1, 15);
+    width: 15vw;
+    height: 8vw;
+    border-radius: 2vw;
+    outline: rgb(44, 44, 44) solid 0.6vw;
+    right: 5%;
+    font-size: 1.5vw;
+}
+.buy-card-button.can-buy {
+    border: rgb(255, 196, 0) solid 4px;
+    color: white;
+}
+.buy-card-button.can-buy:hover {
+    cursor: pointer;
+    background-color: rgb(75, 70, 40);
+    color: gold;
+    transition: 0.1s;
+}
+.buy-card-button p {
+    margin: 0.5vw;
+}
+.buy-card-button:hover .dot {
+    background-image: linear-gradient(to right, rgb(167, 101, 4), gold, rgb(167, 101, 4));
+}
+
+.shop-cycle {
+    width: 2vw;
+    height: 2vw;
+    font-size: 1.5vw;
+    border-width: 0.2vw;
+    outline-width: 0.2vw;
+    border-radius: 50%;
+    margin: 1vw;
+}
+.shop-cycle:hover {
+    background-color: rgb(4, 1, 15);
+    color: white;
+    cursor: default;
+}
+
+.cycle-view-button {
+    position: fixed;
+    right: 2%;
+    top: 45%;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 0.2vw;
+}
+
+.name-display {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 1.5vw;
+    font-size: 1.5vw;
+    color: white;
+    border: gold solid 0.1vw;
+    background-color: black;
+    font-weight: bold;
+    padding: 0.5vw;
+    border-radius: 0.2vw;
+    pointer-events: none;
+}
+
+.name-display.oponent{
+    left: auto;
+    right: 0;
+}
+
+.card-number {
+    position: fixed;
+    font-size: 1.5vw;
+    bottom: 2%;
+    left: 1%;
+    color: white;
+}
+
+.bad-placement {
+    color: rgb(125, 3, 3);
+    font-size: 5vw;
+    padding-bottom: 0.8vw;
+}
+.bad-placement:hover {
+    background-color: rgb(4, 1, 15);
+    color: rgb(125, 3, 3);
+    cursor: default;
+}
+
+.faded {
+    opacity: 0.5;
+}
+
+.card-mode-container {
+    z-index: 10;
+    position: fixed;
+    bottom: 0%;
+}
+.card-mode-container button {
+    width: 8vw;
+}
+
+.battle-select-container {
+    position: fixed;
+    left: 3%;
+    border-radius: 0.2vw;
+    height: 100%;
+    z-index: 11;
+    transition: left 0.2s;
+    pointer-events: none;
+}
+.battle-select-container.closed {
+    left: -20%;
+}
+.battle-select-toggle {
+    width: 2vw;
+    height: 4vw;
+    margin-left: 2vw;
+    pointer-events: auto;
+}
+
+.attack-cursor {
+    cursor: url("../images/Game/hud/Cursors/attack-target.cur") 22 22, auto;
+}
+.cast-cursor {
+    cursor: url("../images/Game/hud/Cursors/cast-target.cur") 22 22, auto;
+}
+
+canvas {
+    z-index: 12;
+    pointer-events: none;
+}

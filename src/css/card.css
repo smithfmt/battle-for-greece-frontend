@@ -1,0 +1,411 @@
+.card-container.medium {
+  --card-width: 15rem;
+  --card-height: 21rem;
+  --card-border-width: 7.5rem;
+  --card-border-height: 10.5rem;
+  --card-image-size: 9.75rem;
+  --ability-icon-size: 2.25rem;
+  --buffer: 0.75rem;
+  --small-buffer: 0.375rem;
+  --card-text-box: 3rem;
+  --connector-size: 1.5rem;
+  --cost-width: 1.125rem;
+  --cost-container-width: 6rem;
+  --card-font-size: 0.75rem ;
+  --card-title: 1rem;
+  --ability-title: 0.8rem;
+}
+
+.card-container.small {
+  --card-width: 10rem;
+  --card-height: 14rem;
+  --card-border-width: 5rem;
+  --card-border-height: 7rem;
+  --card-image-size: 6.4rem;
+  --ability-icon-size: 1.5rem;
+  --buffer: 0.5rem;
+  --small-buffer: 0.25rem;
+  --card-text-box: 2rem;
+  --connector-size: 1rem;
+  --cost-width: 0.75rem;
+  --cost-container-width: 4rem;
+  --card-font-size: 0.5rem ;
+  --card-title: 0.75rem;
+  --ability-title: 0.75rem;
+}
+
+:root {
+  --card-width: 10rem;
+  --card-height: 14rem;
+  --card-border-width: 5rem;
+  --card-border-height: 7rem;
+  --card-image-size: 6.4rem;
+  --ability-icon-size: 1.5rem;
+  --buffer: 0.5rem;
+  --small-buffer: 0.25rem;
+  --card-text-box: 2rem;
+  --connector-size: 1rem;
+  --cost-width: 0.75rem;
+  --cost-container-width: 4rem;
+  --card-font-size: 0.5rem ;
+  --card-title: 0.75rem;
+  --ability-title: 0.75rem;
+  --card-border-radius: 8px;
+  --card-border-thickness: 0.2rem;
+}
+
+.card-container.payment {
+  --card-width: 10vw;
+  --card-height: 14vw;
+  --card-border-width: 5vw;
+  --card-border-height: 7vw;
+  --card-image-size: 6.4vw;
+  --ability-icon-size: 1.5vw;
+  --buffer: 0.5vw;
+  --small-buffer: 0.25vw;
+  --card-text-box: 2vw;
+  --connector-size: 1vw;
+  --cost-width: 0.75vw;
+  --cost-container-width: 4vw;
+  --card-font-size: 0.5vw;
+  --card-title: 0.75vw;
+  --ability-title: 0.75vw;
+  --card-border-radius: 0.6vw;
+  --card-border-thickness: 0.2vw;
+}
+
+.card-slot {
+  box-sizing: border-box;
+  width: var(--card-width);
+  height: var(--card-height);
+}
+.card-slot.select {
+  background-color: rgba(127, 255, 212, 0.368);
+  border-radius: var(--card-border-radius);
+}
+.card-slot.select:hover {
+  background-color: rgba(255, 221, 127, 0.368);
+}
+
+.card-container.select {
+  box-shadow: 0vw 0vw 2vw 1vw rgba(161, 125, 4, 0.8), 0vw 0vw 2vw 1vw rgba(90, 69, 0, 0.8);
+  --card-width: 20vw;
+  --card-height: 28vw;
+  --card-border-width: 10vw;
+  --card-border-height: 14vw;
+  --card-image-size: 13vw;
+  --ability-icon-size: 3vw;
+  --buffer: 1vw;
+  --small-buffer: 0.5vw;
+  --card-text-box: 4vw;
+  --connector-size: 2vw;
+  --cost-width: 1.5vw;
+  --cost-container-width: 8vw;
+  --card-font-size: 1vw;
+  --card-title: 1.5vw;
+  --ability-title: 1.2vw;
+  --card-border-thickness: 0.2vw;
+  --card-border-radius: 0.6vw;
+}
+.card-container.select:hover {
+  box-shadow: 0vw 0vw 2vw 1vw rgba(255, 253, 151, 0.8), 0vw 0vw 2vw 1vw rgba(90, 69, 0, 0.8);
+  cursor: pointer;
+}
+
+.hand-card-container:hover .card-container {
+  opacity: 0;
+}
+.hand-card-container:hover .card-container.display {
+  opacity: 1;
+}
+.hand-card-container .card-container {
+  --card-width: 10vw;
+  --card-height: 14vw;
+  --card-border-width: 5vw;
+  --card-border-height: 7vw;
+  --card-image-size: 6.4vw;
+  --ability-icon-size: 1.5vw;
+  --buffer: 0.5vw;
+  --small-buffer: 0.25vw;
+  --card-text-box: 2vw;
+  --connector-size: 1vw;
+  --cost-width: 0.75vw;
+  --cost-container-width: 4vw;
+  --card-font-size: 0.5vw ;
+  --card-title: 0.75vw;
+  --ability-title: 0.75vw;
+  --card-border-thickness: 0.2vw;
+  --card-border-radius: 0.6vw;
+}
+.card-container.display {
+  box-shadow: 0vw 0vw 2vw 1vw rgba(134, 186, 221, 0.8), 0vw 0vw 2vw 1vw rgba(90, 69, 0, 0.8);
+  --card-width: 15vw;
+  --card-height: 21vw;
+  --card-border-width: 7.5vw;
+  --card-border-height: 10.5vw;
+  --card-image-size: 9.75vw;
+  --ability-icon-size: 2.25vw;
+  --buffer: 0.75vw;
+  --small-buffer: 0.375vw;
+  --card-text-box: 3vw;
+  --connector-size: 1.5vw;
+  --cost-width: 1.125vw;
+  --cost-container-width: 6vw;
+  --card-font-size: 0.75vw ;
+  --card-title: 1vw;
+  --ability-title: 0.8vw;
+  position: relative;
+  z-index: 20;
+  transition: box-shadow 0.1s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card-container {
+  box-sizing: border-box;
+  position: relative;
+  width: var(--card-width);
+  height: var(--card-height);
+  display: flex;
+  border-radius: var(--card-border-radius);
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.card-front-corners {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin-bottom: var(--card-height/28);
+}
+
+.card-background {
+  box-sizing: border-box;
+  outline: black var(--card-border-thickness) solid;
+  outline-offset: calc(-1*var(--card-border-thickness));
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--card-border-radius);
+  background: no-repeat center center fixed url("../images/Card/BackgroundTexture.png");
+  background-size: 100%;
+  z-index: 0;
+  border-top: var(--card-border-height) solid;
+  border-bottom: var(--card-border-height) solid;
+  border-right: var(--card-border-width) solid;
+  border-left: var(--card-border-width) solid;
+}
+
+.card-image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--card-image-size);
+  height: var(--card-image-size);
+  background-color: gray;
+  box-sizing: border-box;
+  border-radius: var(--card-border-radius);
+  object-fit: cover;
+}
+
+.card-image {
+  position: absolute;
+  width: var(--card-image-size);
+  height: var(--card-image-size);
+  object-fit: cover;
+  box-sizing: border-box;
+  border-radius: var(--card-border-radius);
+  border: black solid var(--card-border-thickness);
+  z-index: 0;
+}
+
+.card-image-backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--card-border-radius);
+  z-index: 0;
+  
+}
+
+.ability-icon {
+  position: relative;
+  border-radius: 50%;
+  width: var(--ability-icon-size);
+  height: var(--ability-icon-size);
+  background-color: black;
+  z-index: 1;
+  bottom: var(--buffer);
+}
+
+.ability-icon-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.ability-icon-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+}
+
+.ability-text {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  z-index: 2;
+  bottom: calc(4*var(--buffer));
+  width: var(--card-image-size);
+  height: var(--card-text-box);
+}
+.ability-text p {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: var(--card-text-box);
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.ability-text p strong {
+  position: absolute;
+}
+
+.ability-text .desc {
+  font-size: var(--card-font-size);
+  height: var(--card-text-box);
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.connector {
+  width: var(--connector-size);
+  height: var(--connector-size);
+  background-color: white;
+  border: var(--card-border-thickness) solid black;
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.glowing.red {
+  box-shadow: 0vw 0vw 0.2rem 0.2rem rgba(240, 126, 126, 0.8), 0vw 0vw 0.2rem 0.2rem rgba(118, 61, 61, 0.8);
+}
+.glowing.green {
+  box-shadow: 0vw 0vw 0.2rem 0.2rem rgba(119, 242, 119, 0.8), 0vw 0vw 0.2rem 0.2rem rgba(55, 108, 55, 0.8);
+}
+.glowing.blue {
+  box-shadow: 0vw 0vw 0.2rem 0.2rem rgba(109, 109, 249, 0.8), 0vw 0vw 0.2rem 0.2rem rgba(61, 61, 119, 0.8);
+}
+.glowing.gold {
+  box-shadow: 0vw 0vw 0.2rem 0.2rem rgba(231, 212, 107, 0.743), 0vw 0vw 0.2rem 0.2rem rgba(109, 101, 56, 0.8);
+}
+.connect-image {
+  max-width: 75%;
+  max-height: 75%;
+}
+
+.connector-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stats-container {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+}
+
+.stats {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 0%;
+  bottom: 0%;
+  width: 100%;
+  height: var(--card-text-box);
+  z-index: 2;
+}
+
+.stat-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.stat {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: var(--ability-title);
+  z-index: 3;
+  height: var(--card-text-box);
+  border-radius: 50%;
+  margin: var(--small-buffer);
+  color: rgb(182, 182, 182);
+}
+
+.stat-value {
+  position: absolute;
+  z-index: 4;
+}
+
+.stat img {
+  height: 100%;
+}
+
+.title-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-title {
+  position: relative;
+  font-size: var(--card-title);
+  top: var(--cost-width);
+  margin-bottom: var(--connector-size);
+  margin-top: var(--buffer);
+}
+
+.ability-title {
+  font-size: var(--ability-title);
+  width: 100%;
+}
+
+.back-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.hidden {
+  opacity: 0%;
+}
+
+.battle {
+  color: rgb(172, 172, 172);
+  text-shadow: 2px 0 0 black;
+}

@@ -1,0 +1,444 @@
+.bordered {
+    border: 2.5vw solid transparent;
+    border-image-source: url("../images/Menu/border-pattern.png");
+    border-image-repeat: round;
+    border-image-slice: 200;
+    box-shadow: 0px 0px 2vw 1vw rgba(0, 0, 0, 0.8), 0px 0px 2vw 1vw rgba(0, 0, 0, 0.8);
+}
+
+.menu-wrapper {
+   width: 100%;
+   height: 100%;
+}
+
+.menu {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2vw;
+    width: 25vw;
+    height: 30vw;   
+    background-color: rgba(0, 0, 0, 0.705);
+}
+
+.menu-backdrop {
+    z-index: -1;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background: black url("../images/Menu/menu-backdrop-colour-complete.png") no-repeat fixed center;
+    background-size: cover;
+}
+
+.menu-button {
+    position: relative;
+    margin: 0.8vw;    
+    color: white;
+    background-color: rgb(4, 1, 15);
+    width: 22vw;
+    height: 2.5vw;
+    border: rgb(255, 196, 0) solid 0.2vw;
+    border-radius: 2vw;
+    outline: rgb(44, 44, 44) solid 0.4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8vw;
+    padding: 0;
+}
+.menu-button .dot {
+    position: absolute;
+    left: 10%;
+}
+
+.menu-button:hover {
+    cursor: pointer;
+    background-color: rgb(75, 70, 40);
+    color: gold;
+}
+.menu-button:hover .dot {
+    background-image: linear-gradient(to right, rgb(167, 101, 4), gold, rgb(167, 101, 4));
+}
+
+.mute-button {
+    z-index: 1;
+    width: 3vw;
+    border-radius: 50%;
+    background-image: url("../images/Menu/mute.png");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.mute-button.mute {
+    background-image: url("../images/Menu/unmute.png");
+}
+
+.menu-page {
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 80%;
+    top: 10%;
+    background-color: rgba(0, 0, 0, 0.705);
+    color: white;
+    padding: 3vw;
+    font-size: 1.5vw;
+}
+
+.menu-page .main-menu-button {
+    position: absolute;
+    bottom: 0%;
+}
+
+.profile-button-container {
+    left: 0%;
+    position: absolute;
+    bottom: 0%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.profile-button {
+    border-radius: 0.4vw;
+    font-size: 1vw;
+    width: 8vw;
+    height: 2vw;
+    border-color: transparent;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+.profile-info p {
+    margin-bottom: 1vw;
+}
+
+.menu-input {
+    width: 10vw;
+    font-size: 1.8vw;
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+.menu-input:focus {
+    outline: none;
+}
+
+.menu-button.focus:focus-within {
+    background-color: rgb(75, 70, 40);
+    color: gold;
+}
+
+.profile-username-submit {
+    position: absolute;
+    color: white;
+    font-size: 1.8vw;
+    right: 0%;
+    border-radius: 50%;
+    width: 3vw;
+    max-width: 3vw;
+    padding: 0;
+    height: 3vw;
+    cursor: pointer;
+    background-image: linear-gradient(to right, gold, rgb(167, 101, 4), gold);
+    border: 0.2vw solid black
+}
+.profile-username-submit:hover {
+    background-image: linear-gradient(to right, rgb(167, 101, 4), gold, rgb(167, 101, 4));
+}
+
+.playercount-select {
+    font-size: 1.2vw;
+    position: relative;
+    border-radius: 50%;
+    width: 3vw;
+    height: 3vw;
+    background-size: 1vw 1vw;
+}
+
+.cancel-button {
+    border-radius: 0.4vw;
+    font-size: 0.8vw;
+    width: 10vw;
+    height: 2vw;
+    color: red;
+    margin-top: 2vw;
+}
+
+.lobby-card-container {
+    margin: 1vw;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.lobby-card {
+    border: 0.4vw rgba(0, 0, 0, 0.473) solid;
+    border-radius: 0.4vw;
+    padding: 1vw;
+    height: 6vw;
+    width: 20vw;
+    margin: 0;
+}
+
+.music-controller-container {
+    position: fixed;
+    top: 0%;
+    right: 0%;
+}
+
+.music-controller {
+    border-radius: 0.4vw;
+    border-color: transparent;
+    font-size: 1.5vw;
+    width: 22vw;
+    height: 2vw;
+}
+
+.music-controller:hover {
+    background-color: rgb(4, 1, 15);
+    cursor: default;
+}
+
+.music-controller:focus-within {
+    background-color: rgb(4, 1, 15);
+}
+
+.track-title-container {
+    position: absolute;
+    left: 2%;   
+    display: flex;
+    min-width: 16vw;
+    overflow: hidden;
+}
+
+.track-title {
+    position: relative;
+    height: 2vw;   
+    padding-right: 1vw;
+    z-index: 0;
+
+  /* animation properties */
+  -moz-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  
+  -moz-animation: my-animation 15s linear infinite;
+  -webkit-animation: my-animation 15s linear infinite;
+  animation: my-animation 15s linear infinite;
+}
+@-webkit-keyframes my-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes my-animation {
+    from {
+        -moz-transform: translateX(16vw);
+        -webkit-transform: translateX(16vw);
+        transform: translateX(16vw);
+    }   
+    to {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
+.music-controls {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 0%;
+    justify-content: flex-end;
+    background-color: rgb(4, 1, 15);
+    z-index: 1;
+    height: 2vw;
+}
+.music-controls button {
+    margin: 0.5vw;
+}
+
+.music-controls .mute-button {
+    width: 2vw;
+    height: 2vw;
+}
+
+.note {
+    z-index: 1;
+    width: 1.5vw;
+    text-align: left;
+    background-color: rgb(4, 1, 15);
+}
+
+.next-track-icon {
+    position: relative;
+    left: 0.4vw;
+    width: 0vw;
+    height: 0vw;
+    background-color: transparent;
+    border: transparent 0.6vw solid;
+    border-left: solid gold 0.6vw;
+}
+
+.next-track-button {
+    background-image: none;
+}
+
+.mute-button.silence {
+    background-image: url("../images/Menu/silent.png");
+    color: gold;
+}
+
+.mute-button.silent {
+    background-image: url("../images/Menu/unsilent.png");
+}
+
+.shuffle-button {
+    background-image: url("../images/Menu/shuffle.png");
+}
+.shuffle-button.shuffled {
+    background-color: gold;
+    background-image: url("../images/Menu/unshuffle.png");
+}
+
+.leaderboard-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1vw;
+    width: 20vw;
+    height: 10vw;
+    background-color: rgba(0, 0, 0, 0.548);
+    box-shadow: 0px 0px 2vw 1vw rgba(0, 0, 0, 0.8), 0px 0px 2vw 1vw rgba(0, 0, 0, 0.8);
+}
+
+.wg-info {
+    position: absolute;
+    right: -6.5vw;
+    top: 0.6vw;
+    font-size: 1.2vw;
+    background-color: rgba(0, 0, 0, 0.863);
+    box-shadow: 0px 0px 2vw 1vw rgba(0, 0, 0, 0.329), 0px 0px 2vw 1vw rgba(0, 0, 0, 0.473);
+    opacity: 0;
+}
+
+.wg-container:hover .wg-info {
+    opacity: 1;
+}
+
+.wg-container {
+    display: flex;
+    position: relative;
+}
+
+.leaderboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw;
+    width: 30vw;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.leave-game-button {
+    color: gold;
+    background-color: rgb(4, 1, 15);
+    border: 0.2vw solid gray;
+    border-radius: 0.4vw;
+    font-size: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+    margin-left: 1vw;
+    margin-top: 0.5vw;
+}
+.leave-game-button:hover {
+    background-color: rgb(240, 216, 83);
+    color: red;
+    cursor: pointer;
+    border-color: rgb(4, 1, 15);
+}
+
+.results-card {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    height: 10vw;
+    padding: 1vw;
+    box-sizing: border-box;
+    margin: 1.5vw;
+    background-color: rgba(0, 0, 0, 0.548);
+    box-shadow: 0px 0px 2vw 1vw rgba(0, 0, 0, 0.8), 0px 0px 2vw 1vw rgba(0, 0, 0, 0.8);
+}
+
+.endscreen-container {
+    width: 75vw;
+    height: 75vh;
+}
+
+.endscreen-container {
+    position: fixed;
+}
+
+.endscreen-container .menu-button {
+    position: absolute;
+    bottom: 0%;
+}
+
+.endscreen-content-container {
+    width: 100%;
+    height: 75%;
+}
+
+.endscreen-content-container .game-board-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 70%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-top: 2vw;
+    padding-top: 25rem;
+    box-sizing: border-box;
+}
+.endscreen-content-container .name-display {
+    position: absolute;
+    top: 5vw;
+    opacity: 75%;
+}
+
+.endscreen-content {
+    position: relative;
+    z-index: 100;
+    width: 30%;
+    height: 80%;
+    background-color: rgba(2, 2, 22, 0.644);
+    box-shadow: 0px 0px 2vw 1vw rgba(0, 0, 0, 0.8), 0px 0px 2vw 1vw rgba(0, 0, 0, 0.8);
+    color: antiquewhite;
+    font-size: 1.5vw;
+    padding: 1vw;
+    border-width: 1.5vw;
+    margin-left: 2vw;
+    margin-top: 2vw;
+}
+.endscreen-content div {
+    display: flex;
+    margin-bottom: 1vw;
+}
+
+.endscreen-content div .highlight {
+    margin-left: 1vw;
+}

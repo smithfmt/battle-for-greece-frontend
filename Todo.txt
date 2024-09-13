@@ -1,0 +1,7 @@
+have a backend active indicator on the menu
+
+auto draw card toggle
+
+wall between the battlefields that comes down with animation         
+
+add error popups
